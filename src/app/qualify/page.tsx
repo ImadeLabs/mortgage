@@ -1,16 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 export default function QualifyPage() {
   const [income, setIncome] = useState("");
-  const router = useRouter();
 
-  const handleSubmit = () => {
+  const handleContinue = () => {
     if (!income) return;
 
-    router.push(`/result?income=${income}`);
+    // FORCE FULL NAVIGATION (MOST STABLE FOR iPHONE SAFARI)
+    window.location.href = `/result?income=${income}`;
   };
 
   return (
@@ -19,7 +18,7 @@ export default function QualifyPage() {
       <div className="bg-white shadow-xl rounded-2xl p-6 w-full max-w-md text-center">
 
         <h1 className="text-2xl font-bold mb-4">
-          🏦 Check Your Mortgage Eligibility
+          🏦 Mortgage Eligibility Check
         </h1>
 
         <p className="text-gray-600 mb-6">
@@ -28,15 +27,16 @@ export default function QualifyPage() {
 
         <input
           type="number"
-          placeholder="e.g. 500000"
+          inputMode="numeric"
           value={income}
           onChange={(e) => setIncome(e.target.value)}
-          className="border p-3 w-full rounded mb-4"
+          placeholder="e.g. 500000"
+          className="border p-3 w-full rounded mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <button
-          onClick={handleSubmit}
-          className="bg-blue-600 text-white w-full py-3 rounded-xl font-semibold hover:scale-105 transition"
+          onClick={handleContinue}
+          className="bg-blue-600 text-white w-full py-3 rounded-xl font-semibold active:scale-95 transition"
         >
           Continue 🚀
         </button>

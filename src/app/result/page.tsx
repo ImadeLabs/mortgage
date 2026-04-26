@@ -52,10 +52,14 @@ function ResultContent() {
         </h3>
       </div>
 
-      {/* CTA */}
-      <a href="https://wa.me/2347031028402">
-        <button className="bg-green-600 text-white px-6 py-3 rounded-xl w-full font-semibold">
-          Talk to Bricks & Beyond NG 
+      {/* WHATSAPP CTA */}
+      <a
+        href="https://wa.me/2347031028402"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className="bg-green-600 text-white px-6 py-3 rounded-xl w-full font-semibold hover:scale-105 transition">
+          Talk to Bricks & Beyond NG 💬
         </button>
       </a>
 
