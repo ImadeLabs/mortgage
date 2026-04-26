@@ -7,11 +7,11 @@ export default function Home() {
       <div className="bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl p-8 max-w-xl w-full text-center">
 
         <h1 className="text-3xl font-bold mb-4 text-gray-800">
-          🏡 Own a Home in Nigeria Without Full Payment
+          🏡 Own a Property Or Home in Nigeria Without Full Payment
         </h1>
 
         <p className="text-gray-600 mb-2">
-          Abuja • Lagos • Port Harcourt • Kano
+          Lagos• Abuja • Port Harcourt
         </p>
 
         <p className="text-gray-600 mb-6">
