@@ -31,26 +31,29 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-gray-50">
 
-        <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition cursor-pointer">
-  <span className="text-xl">🏡</span>
-  <span className="font-bold text-gray-800">
-    Bricks & Beyond NG
-  </span>
-</Link>
-
-        {/* 🔝 NAVBAR */}
+        {/* 🔝 NAVBAR (ONLY ONE, CLEAN) */}
         <header className="w-full bg-white shadow-sm">
           <div className="max-w-6xl mx-auto flex items-center justify-between p-4">
-            <h1 className="font-bold text-lg text-gray-800">
-              🏡BnB
-            </h1>
 
-            <a
+            {/* LOGO */}
+            <Link
+              href="/"
+              className="flex items-center gap-2 hover:opacity-80 transition"
+            >
+              <span className="text-xl">🏡</span>
+              <span className="font-bold text-gray-800">
+                Bricks & Beyond NG
+              </span>
+            </Link>
+
+            {/* CTA BUTTON */}
+            <Link
               href="/qualify"
               className="text-sm bg-black text-white px-4 py-2 rounded-lg hover:opacity-90"
             >
               Check Eligibility
-            </a>
+            </Link>
+
           </div>
         </header>
 
@@ -62,9 +65,7 @@ export default function RootLayout({
         {/* 🔻 FOOTER */}
         <footer className="bg-white border-t mt-10">
           <div className="max-w-6xl mx-auto p-6 text-center text-sm text-gray-500">
-            <p>
-              © {new Date().getFullYear()} Bricks & Beyond NG
-            </p>
+            <p>© {new Date().getFullYear()} Bricks & Beyond NG</p>
 
             <p className="mt-2">
               Mortgage guidance for Abuja • Lagos • Port Harcourt • Kano

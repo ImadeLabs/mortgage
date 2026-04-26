@@ -3,50 +3,43 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default function Qualify() {
+export default function QualifyPage() {
   const [income, setIncome] = useState("");
   const router = useRouter();
 
   const handleSubmit = () => {
-    if (!income) return alert("Please enter your income");
+    if (!income) return;
+
     router.push(`/result?income=${income}`);
   };
 
   return (
-    <main className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+    <main className="min-h-screen flex items-center justify-center p-6 bg-gray-50">
 
-      <div className="bg-white shadow-xl rounded-2xl p-8 max-w-md w-full">
+      <div className="bg-white shadow-xl rounded-2xl p-6 w-full max-w-md text-center">
 
-        <h2 className="text-2xl font-bold mb-2 text-gray-800">
-          Let’s check your eligibility 🧠
-        </h2>
+        <h1 className="text-2xl font-bold mb-4">
+          🏦 Check Your Mortgage Eligibility
+        </h1>
 
-        <p className="text-gray-500 mb-6">
-          Step 1 of 3 — Income Check
+        <p className="text-gray-600 mb-6">
+          Enter your monthly income
         </p>
-
-        <label className="text-sm text-gray-600">
-          Monthly Income (₦)
-        </label>
 
         <input
           type="number"
-          placeholder="e.g 500000"
+          placeholder="e.g. 500000"
           value={income}
           onChange={(e) => setIncome(e.target.value)}
-          className="border p-3 rounded-xl w-full mt-2 mb-6 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="border p-3 w-full rounded mb-4"
         />
 
         <button
           onClick={handleSubmit}
-          className="bg-purple-600 hover:bg-purple-700 text-white w-full py-3 rounded-xl font-semibold transition"
+          className="bg-blue-600 text-white w-full py-3 rounded-xl font-semibold hover:scale-105 transition"
         >
-          Continue →
+          Continue 🚀
         </button>
-
-        <p className="text-xs text-gray-400 mt-4 text-center">
-          Secure mortgage estimation system
-        </p>
 
       </div>
 
