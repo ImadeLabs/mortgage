@@ -31,15 +31,19 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-gray-50">
 
-        {/* 🔝 NAVBAR */}
-        <header className="w-full bg-white shadow-sm">
-          <div className="max-w-6xl mx-auto flex items-center justify-between p-4">
-           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition">
+        <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition cursor-pointer">
   <span className="text-xl">🏡</span>
   <span className="font-bold text-gray-800">
     Bricks & Beyond NG
   </span>
 </Link>
+
+        {/* 🔝 NAVBAR */}
+        <header className="w-full bg-white shadow-sm">
+          <div className="max-w-6xl mx-auto flex items-center justify-between p-4">
+            <h1 className="font-bold text-lg text-gray-800">
+              🏡BnB
+            </h1>
 
             <a
               href="/qualify"
